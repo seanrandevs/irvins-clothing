@@ -1,10 +1,15 @@
+import shirt1 from '../assets/images/shirt6.jpg'
+import shirt2 from '../assets/images/shirt7.jpg'
+import shirt3 from '../assets/images/shirt8.jpg'
+
+
 const MainDisplay = () => {
   return (
     <>
     <div className="main-img">
-      <img src='/images/shirt6.jpg' alt="" />
-      <img src='/images/shirt7.jpg' alt="" />
-      <img src='/images/shirt8.jpg' alt="" />
+      <img src={shirt1} alt="" />
+      <img src={shirt2} alt="" />
+      <img src={shirt3} alt="" />
     </div>
       <div className="slider">
         <div className="slides">
