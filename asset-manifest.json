@@ -1,13 +1,16 @@
 {
   "files": {
     "main.css": "/irvins-clothing/static/css/main.a866813a.css",
-    "main.js": "/irvins-clothing/static/js/main.1c1151f5.js",
+    "main.js": "/irvins-clothing/static/js/main.084e39e3.js",
+    "static/media/shirt7.jpg": "/irvins-clothing/static/media/shirt7.05e594f6479a8a15283e.jpg",
+    "static/media/shirt8.jpg": "/irvins-clothing/static/media/shirt8.367fa0ce082ed27675da.jpg",
+    "static/media/shirt6.jpg": "/irvins-clothing/static/media/shirt6.beab26f47271b26d0efa.jpg",
     "index.html": "/irvins-clothing/index.html",
     "main.a866813a.css.map": "/irvins-clothing/static/css/main.a866813a.css.map",
-    "main.1c1151f5.js.map": "/irvins-clothing/static/js/main.1c1151f5.js.map"
+    "main.084e39e3.js.map": "/irvins-clothing/static/js/main.084e39e3.js.map"
   },
   "entrypoints": [
     "static/css/main.a866813a.css",
-    "static/js/main.1c1151f5.js"
+    "static/js/main.084e39e3.js"
   ]
 }
