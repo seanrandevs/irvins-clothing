@@ -437,6 +437,9 @@ h4 {
 
 /* --------------- media for slider ---------------- */
 @media screen and (max-width: 767px) {
+  .irvins {
+    font-size: 2rem;
+  }
   .main-img {
    display: none;
    padding: 0;
