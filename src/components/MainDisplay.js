@@ -18,13 +18,13 @@ const MainDisplay = () => {
        <input type="radio" name="radio-btn" id="radio3" />
           
        <div className="slide first">
-        <img src='/images/shirt6.jpg' alt="" />
+        <img src={shirt1} alt="" />
        </div>
        <div className="slide">
-        <img src='/images/shirt7.jpg' alt="" />
+        <img src={shirt2} alt="" />
        </div>
        <div className="slide">
-        <img src='/images/shirt8.jpg' alt="" />
+        <img src={shirt3} alt="" />
        </div>
 
         <div className="navigation-auto">
