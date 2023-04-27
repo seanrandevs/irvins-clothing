@@ -1,13 +1,9 @@
-import { FaBars } from "react-icons/fa";
 import { BsCart2 } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 
 const Header = ({ displayCart, totalQuantity }) => {
   return (
-    <nav className="navbar">
-        <span className="nav-icon">
-            <FaBars />
-        </span>            
+    <nav className="navbar">          
             <Link to="/"className="irvins">Irvins</Link>
           <div className="cart-btn">
                <div className="sign-in">
