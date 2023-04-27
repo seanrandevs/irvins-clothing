@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/irvins-clothing/static/css/main.e47f1f01.css",
-    "main.js": "/irvins-clothing/static/js/main.66ff9f9c.js",
+    "main.css": "/irvins-clothing/static/css/main.88be7565.css",
+    "main.js": "/irvins-clothing/static/js/main.aaae929c.js",
     "static/media/shirt7.jpg": "/irvins-clothing/static/media/shirt7.05e594f6479a8a15283e.jpg",
     "static/media/shirt8.jpg": "/irvins-clothing/static/media/shirt8.367fa0ce082ed27675da.jpg",
     "static/media/shirt6.jpg": "/irvins-clothing/static/media/shirt6.beab26f47271b26d0efa.jpg",
     "index.html": "/irvins-clothing/index.html",
-    "main.e47f1f01.css.map": "/irvins-clothing/static/css/main.e47f1f01.css.map",
-    "main.66ff9f9c.js.map": "/irvins-clothing/static/js/main.66ff9f9c.js.map"
+    "main.88be7565.css.map": "/irvins-clothing/static/css/main.88be7565.css.map",
+    "main.aaae929c.js.map": "/irvins-clothing/static/js/main.aaae929c.js.map"
   },
   "entrypoints": [
-    "static/css/main.e47f1f01.css",
-    "static/js/main.66ff9f9c.js"
+    "static/css/main.88be7565.css",
+    "static/js/main.aaae929c.js"
   ]
 }
