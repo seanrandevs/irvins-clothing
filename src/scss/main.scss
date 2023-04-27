@@ -315,6 +315,15 @@ h4 {
     font-family: $font-family;
     font-size:2rem;
   }
+  .login, .register {
+    font-size: 1rem;
+  }
+  .cart-content {
+    width: 420px;
+  }
+  .cart-item {
+    width: 400px;
+  }
   .create-account-form {
     max-width: 450px;
   }
@@ -425,11 +434,7 @@ h4 {
 }
 
 /* --------------- media for slider ---------------- */
-@media screen and (max-width: 767px) {
-  .login, .register {
-    font-size: 1rem;
-  }
-  
+@media screen and (max-width: 767px) {  
   .main-img {
    display: none;
    padding: 0;
