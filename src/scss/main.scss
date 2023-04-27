@@ -95,13 +95,6 @@
   padding: 3rem 0;
 }
 
-@media screen and (min-width: 767px) and (max-width: 1023px) {
-  .main-img img {
-    height: 400px;
-    width: 400px;
-  }
-}
-
 /* --------------- products ---------------- */
 
 .product-content {
@@ -440,12 +433,16 @@ h4 {
   .irvins {
     font-size: 2rem;
   }
+  .login, .register {
+    font-size: 1rem;
+  }
+  
   .main-img {
    display: none;
    padding: 0;
   }
-  img {
-    width: 455px;
+   .slider .slide img {
+    width: 450px;
     height: 450px;
    }
   .slider {
