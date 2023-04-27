@@ -283,6 +283,7 @@ h4 {
 
  /* --------------- footer ---------------- */
 .footer {
+  width: 100%;
   background-color: $footer-color;
   display: flex;
   align-items: center;
@@ -308,20 +309,15 @@ h4 {
 
   /* --------------- media ---------------- */
  @media screen and (max-width: 768px) {
-  .nav-icon {
-    font-size: 1.7rem;
-    margin-left: .5rem;
-  }
   .irvins {
-    margin-left: 1rem;
-    padding-top: 20px;
+    margin-left: .8rem;
+    padding-top: 10px;
     font-family: $font-family;
-    font-size:4rem;
+    font-size:2rem;
   }
   .create-account-form {
     max-width: 450px;
   }
-
 }
 /* --------------- create account form ---------------- */
 .create-account-form {
@@ -430,9 +426,6 @@ h4 {
 
 /* --------------- media for slider ---------------- */
 @media screen and (max-width: 767px) {
-  .irvins {
-    font-size: 2rem;
-  }
   .login, .register {
     font-size: 1rem;
   }
@@ -442,20 +435,20 @@ h4 {
    padding: 0;
   }
    .slider .slide img {
-    width: 450px;
-    height: 450px;
+    width: 375px;
+    height: 375px;
    }
   .slider {
     margin: 0 auto;
     display: block;
-    width: 455px;
-    height: 500px;
+    width: 375px;
+    height: 375px;
     padding: 10px;
     overflow: hidden;
   }
   .slides{
-    width: 455px;
-    height: 450px;
+    width: 375px;
+    height: 375px;
     display: flex;
   }
 
@@ -469,7 +462,7 @@ h4 {
     /*css for manual navigation*/
     .navigation-manual{
       position: absolute;
-      width: 500px;
+      width: 375px;
       margin-top: -40px;
       display: flex;
       justify-content: center;
