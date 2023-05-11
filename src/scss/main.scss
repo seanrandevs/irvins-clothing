@@ -70,6 +70,11 @@
  .login:hover, .register:hover {
   text-decoration: underline;
  }
+ @media screen and (max-width: 767px) {
+  .navbar {
+    margin: 0;
+  }
+ }
 
 /* --------------- main image ---------------- */
 .slider {
