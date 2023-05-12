@@ -124,6 +124,10 @@
   cursor: pointer;
 }
 
+.img-container {
+position: relative;
+overflow: hidden;
+}
 .img-container:hover {
 position: relative;
 overflow: hidden;
