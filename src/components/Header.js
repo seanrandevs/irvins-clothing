@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Header = ({ displayCart, totalQuantity }) => {
   return (
     <nav className="navbar">          
-            <Link to="/"className="irvins">Irvins</Link>
+            <Link to="/" data-testid="name" className="irvins">Irvins</Link>
           <div className="cart-btn">
                <div className="sign-in">
                 <Link to="/login" className="login">Login</Link>
@@ -15,7 +15,7 @@ const Header = ({ displayCart, totalQuantity }) => {
                 <h4>Cart</h4>
                   <div className="cart-icon">
                     <BsCart2 />
-                    <div className="cart-items">{totalQuantity}</div>
+                    <div className="cart-items" data-testid="cart-item">{totalQuantity}</div>
                 </div>
               </Link>
           </div>

@@ -41,18 +41,18 @@ const Register = ({ totalQuantity, users, setUsers }) => {
     onSubmit,
   });
 
-  console.log(errors);
   return (
     <>
     <Header totalQuantity={totalQuantity} />
     <div className="create-account-form">
      <h2>Create an Account</h2>
-      <form onSubmit={handleSubmit} autoComplete="off">
+      <form data-testid="form" onSubmit={handleSubmit} autoComplete="off">
       <div className="inputs">
         {errors.firstName && touched.firstName && <p className="error">{errors.firstName}</p>}
         <input
         className={`form-control ${errors.firstName && touched.firstName ? 'is-invalid' : ""}`}
         placeholder="First name"
+        data-testid="fname"
         value={values.firstName}
         onChange={handleChange}
         onBlur={handleBlur}
@@ -65,6 +65,7 @@ const Register = ({ totalQuantity, users, setUsers }) => {
         <input
         className={`form-control ${errors.lastName && touched.lastName ? 'is-invalid' : ""}`}
         placeholder="Last name"
+        data-testid="lname"
         value={values.lastName}
         onChange={handleChange}
         onBlur={handleBlur}
@@ -77,6 +78,7 @@ const Register = ({ totalQuantity, users, setUsers }) => {
         <input
         className={`form-control ${errors.email && touched.email ? 'is-invalid' : ""}`}
         placeholder="Email"
+        data-testid="e-test"
         value={values.email}
         onChange={handleChange}
         onBlur={handleBlur}
@@ -89,6 +91,7 @@ const Register = ({ totalQuantity, users, setUsers }) => {
         <input
         className={`form-control ${errors.password && touched.password ? 'is-invalid' : ""}`}
         placeholder="Password"
+        data-testid="pass-test"
         value={values.password}
         onChange={handleChange}
         onBlur={handleBlur}
@@ -101,6 +104,7 @@ const Register = ({ totalQuantity, users, setUsers }) => {
         <input
         className={`form-control ${errors.confirmPassword && touched.confirmPassword ? 'is-invalid' : ""}`}
         placeholder="Confirm Password"
+        data-testid="confirm-test"
         value={values.confirmPassword}
         onChange={handleChange}
         onBlur={handleBlur}

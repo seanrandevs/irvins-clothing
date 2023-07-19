@@ -2,10 +2,10 @@ import { FaShoppingCart } from "react-icons/fa";
 
 const Products = ({ product, onAdd }) => {
   return (
-            <div className="product">
+            <div className="product" id={product.id}>
                 <div className="img-container">
                     <img className="product-img" src={product.image} alt="" />
-                    <button className="bag-btn" onClick={() => onAdd(product)}>
+                    <button data-testid="bag-btn" className="bag-btn" onClick={() => onAdd(product)}>
                         <FaShoppingCart className='fa-shopping-cart' />
                         add to cart
                     </button>

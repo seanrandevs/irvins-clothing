@@ -18,7 +18,7 @@ const submitHandler = e => {
     <div className="form">
         <h2>Login To Your Account</h2>
         {(error !== "") ? <div className="error">{error}</div> : ""}
-      <form className="loginbox" onSubmit={submitHandler}>
+      <form className="loginbox" data-testid="form" onSubmit={submitHandler}>
         <input 
         placeholder="Email" 
         type="text" 

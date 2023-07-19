@@ -101,7 +101,7 @@ function App() {
         />} />
         <Route path="login" element=
         {(user.email !== "") ? (
-        <LoggedIn user={user} Logout={Logout} />          
+        <LoggedIn user={user} Logout={Logout} />   
         ) : (
         <Login 
         totalQuantity={totalQuantity} 
