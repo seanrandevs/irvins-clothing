@@ -8,7 +8,7 @@ const Cart = ({ cart, totalPrice, totalQuantity, removeItem, onAdd, setCart, onR
     <Header totalQuantity={totalQuantity} />
     <h1>Shopping Cart</h1>
     <div data-testid="cart-item-section" className="cart-item-section">
-    {cart.map((item) => (
+    {cart?.map((item) => (
     <CartItem 
     item={item} 
     key={item.id}
@@ -19,7 +19,7 @@ const Cart = ({ cart, totalPrice, totalQuantity, removeItem, onAdd, setCart, onR
     ))}
     </div>
       <div className="cart-footer">
-        <h3>your total : $<span className="cart-total">{totalPrice.toFixed(2)}</span></h3>
+        <h3>your total : $<span className="cart-total">{totalPrice?.toFixed(2)}</span></h3>
         <button className="clear-cart banner-btn" onClick={() => setCart([])}>clear cart</button>
       </div>
     <Footer />

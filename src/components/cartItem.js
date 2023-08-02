@@ -9,7 +9,7 @@ const cartItem = ({ item, removeItem, onAdd, onRemove }) => {
             <div>
                 <h4>{item.title}</h4>
                 <h5>${item.price}</h5>
-                <span className="remove-btn" onClick={() => removeItem(item.id)}>remove</span>
+                <span className="remove-btn" data-testid="remove-button" onClick={() => removeItem(item.id)}>remove</span>
             </div>
             <div>
                 <FaChevronUp onClick={() => onAdd(item)} />

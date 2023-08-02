@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import Register from './Register';
-import { HashRouter } from 'react-router-dom';
-const MockRegister = () => {
-    return (
-    <HashRouter hashType="slash">
+import { BrowserRouter as Router } from 'react-router-dom';
+ const MockRegister = () => {
+  return (
+    <Router>
       <Register />
-    </HashRouter>
-    )
+    </Router>
+  );
 }
 
 describe('Test Register', () => {

@@ -1,46 +1,62 @@
 import { render, screen } from '@testing-library/react';
-import { HashRouter } from 'react-router-dom';
 import App from './App';
-import axios from 'axios';
-import MockAdapter from 'axios-mock-adapter';
-
-const MockApp = () => {
-    return (
-    <HashRouter hashType="slash">
+import { BrowserRouter as Router } from 'react-router-dom';
+import { rest } from 'msw';
+import { setupServer } from 'msw/node';
+const RenderApp = () => {
+  return (
+    <Router>
       <App />
-    </HashRouter>
-    )
+    </Router>
+  );
 }
 
-test('should render irvins as name', () => {
-  render(<MockApp />)
-  const Products = screen.getByRole('heading', {  name: /products/i})
-  expect(Products).toBeInTheDocument();
-})
-
-afterEach(() => {
-  mock.reset();
+test('render irvins', async () => {
+  render(<RenderApp />);
+  const irvins = screen.getByText('Irvins');
+  expect(irvins).toBeInTheDocument();
 });
 
-const mock = new MockAdapter(axios);
-mock.onGet('/api/products').reply(200, {
-  products: [
-    { id: 1, name: 'Product 1' },
-    { id: 2, name: 'Product 2' },
-    // Add more product objects as needed
-  ]
+const server = setupServer( rest.get('https://fakestoreapi.com/products?limit=1', (req, res, ctx) => {
+  return res(
+    ctx.status(200),
+    ctx.json([
+    {
+      "id": 1,
+      "title": "Laptop Backpack",
+      "price": 109.99,
+  },
+  ]));
+}));
+
+beforeAll(() => server.listen());
+afterEach(() => server.resetHandlers());
+afterAll(() => server.close());
+
+describe('App', () => {
+it('fetches and renders data', async () => {
+  render(<RenderApp />);
+  const items = await screen.findAllByRole('listitem');
+  expect(items).toHaveLength(1);
 });
-it('should fetch products from the API', async () => {
-  // Perform the necessary actions in your component that trigger the API request
-
-  // Assert that the API request was made
-  expect(mock.history.get.length).toBe(1);
-  expect(mock.history.get[0].url).toBe('https://fakestoreapi.com/products?limit=8');
-
-  // Assert the response data
-  const response = await axios.get('https://fakestoreapi.com/products?limit=8');
-  expect(response.status).toBe(200);
-  expect(response.data.products.length).toBe(2);
-  expect(response.data.products[0].name).toBe('Product 1');
-  // Add more assertions as needed
+it('renders Laptop Backpack', async () => { 
+  render(<RenderApp />);
+  const Product = await screen.findByText('Laptop Backpack');
+  expect(Product).toBeInTheDocument();
+});
+it('renders $109.99', async () => { 
+  render(<RenderApp />);
+  const price = await screen.findByText('$109.99');
+  expect(price).toBeInTheDocument();
+});
+it('renders Add to cart', async () => { 
+  render(<RenderApp />);
+  const add = await screen.findByTestId('bag-button');
+  expect(add).toBeInTheDocument();
+});
+it('renders 0 in cart', async () => { 
+  render(<RenderApp />);
+  const cart = await screen.findByText('0');
+  expect(cart).toBeInTheDocument();
+});
 });

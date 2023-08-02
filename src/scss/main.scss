@@ -102,7 +102,9 @@
 }
 
 /* --------------- products ---------------- */
-
+li {
+  list-style-type: none;
+}
 .product-content {
   width: 90vw;
   margin: 0 auto;

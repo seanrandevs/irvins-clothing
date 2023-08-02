@@ -1,13 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import Login from './Login';
-import { HashRouter } from 'react-router-dom';
 
-const MockLogin = () => {
-    return (
-    <HashRouter hashType="slash">
+import { BrowserRouter as Router } from 'react-router-dom';
+ const MockLogin = () => {
+  return (
+    <Router>
       <Login />
-    </HashRouter>
-    )
+    </Router>
+  );
 }
 
 describe('Testing Login page', () => {

@@ -1,13 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import Header from './Header';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const MockHeader = () => {
-    return (
-    <HashRouter hashType="slash">
+  return (
+    <Router>
       <Header />
-    </HashRouter>
-    )
+    </Router>
+  );
 }
 
 describe('header testing', () => {

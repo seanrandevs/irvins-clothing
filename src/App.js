@@ -38,9 +38,10 @@ function App() {
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem("CART")) || []);
   const [products, setProducts] = useState([]);
   // Get products from api and set them in products array.
+ const api = 'https://fakestoreapi.com/products?limit=8';
  useEffect(() => {
   const getProducts = async () => {
-    const productsFromServer = await fetch('https://fakestoreapi.com/products?limit=8');
+    const productsFromServer = await fetch(api);
     const data = await productsFromServer.json();
       setProducts(data);
   }
