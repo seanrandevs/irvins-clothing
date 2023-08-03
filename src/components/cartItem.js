@@ -12,9 +12,9 @@ const cartItem = ({ item, removeItem, onAdd, onRemove }) => {
                 <span className="remove-btn" data-testid="remove-button" onClick={() => removeItem(item.id)}>remove</span>
             </div>
             <div>
-                <FaChevronUp onClick={() => onAdd(item)} />
-                <p className="item-amount">{item.numberOfUnits}</p>
-                <FaChevronDown onClick={() => onRemove(item)} />
+                <FaChevronUp data-testid="add-item" onClick={() => onAdd(item)} />
+                <p data-testid="item-quanity" className="item-amount">{item.numberOfUnits}</p>
+                <FaChevronDown data-testid="subtract-item" onClick={() => onRemove(item)} />
             </div>
           </div> 
         </div>
