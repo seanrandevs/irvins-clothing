@@ -359,6 +359,18 @@ h4 {
     font-size: 0.8rem;
   }
 }
+@media screen and (max-width: 933px) {
+  .main-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-img img {
+    max-width: 400px;
+    max-height: 400px;
+  }
+ }
 /* --------------- create account form ---------------- */
 .create-account-form {
   background: $footer-color;
