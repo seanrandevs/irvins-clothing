@@ -188,7 +188,7 @@ h4 {
 @media screen and (max-width: 963px) {
   .product-img {
     height: 175px;
-    width: 35%;
+    width: 45%;
     margin: 0 auto;
   }
   h3 {
@@ -297,6 +297,7 @@ h4 {
     width: 25vw;
     min-width: 450px;
   }
+  
 }
  @media screen and (max-width: 768px) {
   .cart-content {
@@ -478,7 +479,7 @@ h4 {
     display: block;
     width: 375px;
     height: 375px;
-    padding: 10px;
+    // padding: 10px;
     overflow: hidden;
   }
   .slides{
