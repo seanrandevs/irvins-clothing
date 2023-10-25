@@ -82,23 +82,20 @@
   display: none;
 }
 .main-img {
-  width: 90vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
-  grid-row-gap: 2.5rem;
-  grid-column-gap: 2.5rem;
-
+  padding-top: 3rem;
+  margin: 3rem auto;
+  max-width:70vw;
+    display: flex;
     img {
-    height: 500px;
-    width: 500px;
+    height: 450px;
+    width: 450px;
   }
 }
 .section-title h2 {
   text-align: center;
   font-size: 3rem;
   font-family: $font-family;
-  padding: 3rem 0;
+  padding-bottom: 3rem;
 }
 
 /* --------------- products ---------------- */
@@ -371,6 +368,17 @@ h4 {
     max-height: 400px;
   }
  }
+ @media screen and (min-width: 1024px) and (max-width: 1422px){
+  .main-img {
+    padding-top: 2rem;
+    max-width: 80vw;
+    display: flex;
+      img {
+      height: 350px;
+      width: 350px;
+    }
+  }
+ }
 /* --------------- create account form ---------------- */
 .create-account-form {
   background: $footer-color;
@@ -427,7 +435,7 @@ h4 {
 .form {
   background: $footer-color;
   width: 350px;
-  margin: 200px auto;
+  margin: 5rem auto;
   padding: 40px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   h2 {
@@ -477,7 +485,7 @@ h4 {
 }
 
 /* --------------- media for slider ---------------- */
-@media screen and (max-width: 767px) {  
+@media screen and (max-width: 1023px) {  
   .main-img {
    display: none;
    padding: 0;
@@ -487,11 +495,10 @@ h4 {
     height: 375px;
    }
   .slider {
-    margin: 0 auto;
+    margin: 4rem auto;
     display: block;
     width: 375px;
     height: 375px;
-    // padding: 10px;
     overflow: hidden;
   }
   .slides{
